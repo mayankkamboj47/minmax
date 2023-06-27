@@ -142,7 +142,7 @@ if(typeof window !== 'undefined') {
             if (winner) {
                 console.log(winner);
                 setTimeout(()=>{
-                    alert(`Player ${winner} wins!`);
+                    alert(`${winner===2 ? 'Computer' : 'Human'} wins!`);
                     game = tictactoe.game;
                     tictactoe.draw(tictactoeCanvas, tictactoe.game);
                     optimalPlay = createOptimalPlay(tictactoe);    
@@ -153,3 +153,4 @@ if(typeof window !== 'undefined') {
 }
 
 if(typeof module !== 'undefined') module.exports = tictactoe;
+
